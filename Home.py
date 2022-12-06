@@ -22,7 +22,7 @@ def Generator():
     app3.hide()
     app4.hide()
 
-app3 = Window(app,title="Saved Passwords")
+app3 = Window(app,title="Saved Passwords",width=1000)
 
 def saved():
     app.hide()
@@ -37,14 +37,15 @@ def descriptim():
 app4 =Window(app,title="Desription",height=75)
 
 def save():
+    app4.show()
     global l
     h=[]
     o=[input.value,d,i.value]
-    app4.show()
     h.append(o)
     app.hide()
     i.clear()
     l=h
+    
 
 def generate():
     p1=random.randint(1,10)
@@ -60,16 +61,11 @@ def generate():
 
 app5=Window(app,"Text search by date for password")
 
-def search():
-    app5.show()
-    for h in range(0,14):
-        if i2.value == save[h]:
-            print(save[h])
 
 app6=Window(app)
 
 def toString():
-    u.text(text=l)
+    u.value=
 
 def exit():
     app.destroy()
@@ -111,9 +107,7 @@ homes = PushButton(app3,text="Home",command=Password)
 
 button6 = PushButton(app3,text="Click here to go to pass generator",command=Generator)
 
-button7 = PushButton(app3,text="Click here to search by date and time saved",command=search)
-
-button8 = PushButton(app3,text="Display last passwords",command=toString)
+button7 = PushButton(app3,text="Display last passwords",command=toString)
 
 time =Text(app5,text=d)
 
@@ -125,7 +119,7 @@ time =Text(app4,text=d)
 t = Text(app4,text="Type your description below")
 i= TextBox(app4,width=50)
 
-u =Text(app3,text=l)
+u =Text(app3)
 
 app2.hide()
 app3.hide()
