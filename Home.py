@@ -6,7 +6,7 @@ app = App(title="Passwords")
 
 d = datetime.now()
 
-l=None
+l=[]
 
 def Password():
     app.show()
@@ -59,13 +59,11 @@ def generate():
     p=[p1,p2,p3,p4,p5,p6,p7,p8]
     input.value=p
 
-app5=Window(app,"Text search by date for password")
-
-
 app6=Window(app)
 
 def toString():
-    u.value=
+    for u in range(0,14):
+        u.value=i[u]
 
 def exit():
     app.destroy()
@@ -109,11 +107,6 @@ button6 = PushButton(app3,text="Click here to go to pass generator",command=Gene
 
 button7 = PushButton(app3,text="Display last passwords",command=toString)
 
-time =Text(app5,text=d)
-
-t2 = Text(app5,text="Type your date and time below \n (how to type date and time in 2022-12-01 11:20:54)")
-i2= TextBox(app5,width=50)
-
 time =Text(app4,text=d)
 
 t = Text(app4,text="Type your description below")
@@ -124,6 +117,5 @@ u =Text(app3)
 app2.hide()
 app3.hide()
 app4.hide()
-app5.hide()
 app6.hide()
 app.display()
