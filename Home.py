@@ -69,7 +69,7 @@ def search():
 app6=Window(app)
 
 def toString():
-    u.tex(text=l)
+    u.text(text=l)
 
 def exit():
     app.destroy()
