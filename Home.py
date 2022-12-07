@@ -16,7 +16,7 @@ def Generator():
     app2.show()
     app.hide()
     app3.hide()
-    app4.hide()
+    app4.show()
 
 app3 = Window(app,title="Saved Passwords",width=1000)
 
@@ -38,7 +38,6 @@ def description():
 
 
 def save():
-    app4.show()
     while len(input.value) >8:
         input.clear()
         input.append("Only 8 numbers")
